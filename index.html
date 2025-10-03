@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudioLens — Photography & Videography</title>
+  <meta name="description" content="Professional photography & videography studio for weddings, graduations, concerts, ecommerce, and fashion." />
+  <meta name="keywords" content="photography, videography, wedding, graduation, concert, ecommerce, fashion, studio" />
+  <meta property="og:title" content="StudioLens — Photography & Videography" />
+  <meta property="og:description" content="See our portfolio across weddings, graduations, concerts, ecommerce, and fashion." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/og-cover.jpg" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"StudioLens",
+    "url":"https://example.com",
+    "description":"Photography & videography studio specializing in weddings, graduations, concerts, ecommerce and fashion.",
+    "areaServed":"Worldwide",
+    "sameAs": ["https://instagram.com/yourstudio","https://www.facebook.com/yourstudio"],
+    "priceRange":"$$",
+    "image":"https://example.com/assets/og-cover.jpg",
+    "makesOffer":[
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Wedding Photography"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Graduation Sessions"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Live Concert Coverage"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Ecommerce Photoshoots"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Fashion Photosessions"}}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="container">
+    <nav class="nav">
+      <div class="logo">Studio<span>Lens</span></div>
+      <a class="cta" href="#contact">Get a Quote</a>
+    </nav>
+    <section class="hero">
+      <h1>Capture the Moment. <span>Tell the Story.</span></h1>
+      <p>Premium photography & videography — weddings, graduations, concerts, ecommerce, and fashion.</p>
+      <div class="hero-cta">
+        <a href="#portfolio" class="btn">View Portfolio</a>
+        <a href="#services" class="btn btn-alt">Our Services</a>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section id="services" class="container services">
+      <h2>Services</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Wedding</h3>
+          <p>Full-day coverage, highlight films, and heirloom albums.</p>
+        </article>
+        <article class="card">
+          <h3>Graduation</h3>
+          <p>Solo & group sessions, campus locations, print-ready edits.</p>
+        </article>
+        <article class="card">
+          <h3>Live Concert</h3>
+          <p>Multi-cam capture, backstage, artist press kits.</p>
+        </article>
+        <article class="card">
+          <h3>Ecommerce</h3>
+          <p>On-model, flat-lay, product 360°, color-consistent edits.</p>
+        </article>
+        <article class="card">
+          <h3>Fashion</h3>
+          <p>Editorial sets, lookbooks, campaign videos.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="portfolio" class="container portfolio">
+      <div class="portfolio-header">
+        <h2>Portfolio</h2>
+        <div class="filters" role="tablist" aria-label="Portfolio filters">
+          <button class="filter active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="filter" data-filter="wedding" role="tab">Wedding</button>
+          <button class="filter" data-filter="graduation" role="tab">Graduation</button>
+          <button class="filter" data-filter="concert" role="tab">Live Concert</button>
+          <button class="filter" data-filter="ecommerce" role="tab">Ecommerce</button>
+          <button class="filter" data-filter="fashion" role="tab">Fashion</button>
+        </div>
+      </div>
+      <div class="masonry" id="gallery">
+        <!-- Sample thumbnails using placeholders; replace with real assets -->
+        <a href="assets/hero1.jpg" class="item wedding"><img loading="lazy" src="assets/hero1_thumb.jpg" alt="Wedding highlight" /></a>
+        <a href="assets/grad1.jpg" class="item graduation"><img loading="lazy" src="assets/grad1_thumb.jpg" alt="Graduation session" /></a>
+        <a href="assets/concert1.jpg" class="item concert"><img loading="lazy" src="assets/concert1_thumb.jpg" alt="Live concert photo" /></a>
+        <a href="assets/ecom1.jpg" class="item ecommerce"><img loading="lazy" src="assets/ecom1_thumb.jpg" alt="Ecommerce product" /></a>
+        <a href="assets/fashion1.jpg" class="item fashion"><img loading="lazy" src="assets/fashion1_thumb.jpg" alt="Fashion editorial" /></a>
+        <a href="assets/hero2.jpg" class="item wedding"><img loading="lazy" src="assets/hero2_thumb.jpg" alt="Wedding ceremony" /></a>
+      </div>
+    </section>
+
+    <section class="container about">
+      <h2>About</h2>
+      <p>We blend cinematic storytelling with pristine imagery to capture authentic moments and elevate your brand.
+      Available worldwide.</p>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h2>Contact</h2>
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Demo only. Connect to your backend or Formspree.');">
+        <div class="row">
+          <input type="text" placeholder="Full name" required aria-label="Full name" />
+          <input type="email" placeholder="Email address" required aria-label="Email address" />
+        </div>
+        <div class="row">
+          <select aria-label="Service">
+            <option>Wedding</option>
+            <option>Graduation</option>
+            <option>Live Concert</option>
+            <option>Ecommerce</option>
+            <option>Fashion</option>
+          </select>
+          <input type="tel" placeholder="Phone (optional)" aria-label="Phone" />
+        </div>
+        <textarea rows="5" placeholder="Tell us about your project..." aria-label="Project details"></textarea>
+        <button class="btn">Request a Quote</button>
+      </form>
+      <p class="tiny">This is a live demo. Form is non-functional by design.</p>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p>© <span id="year"></span> StudioLens — All rights reserved.</p>
+  </footer>
+</body>
+</html>

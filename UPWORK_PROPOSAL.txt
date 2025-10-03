@@ -1,0 +1,24 @@
+Subject: High‑impact Studio Website (SEO‑tuned, mobile‑first) — free live preview included
+
+Hi there — I can deliver a polished, fast and SEO‑ready site that showcases your studio’s Weddings, Graduations, Live Concerts, Ecommerce, and Fashion work.
+
+What you’ll get:
+• Custom design that fits your brand (not a cookie‑cutter theme)
+• Portfolio with category filters and fast, lazy‑loaded galleries
+• Mobile‑first, responsive layout (Core Web Vitals targeted at 90+)
+• On‑page SEO: clean URLs, meta tags, OpenGraph, and JSON‑LD
+• Contact/booking form integrated (Formspree/SendGrid or custom)
+• Easy content updates (optional CMS: Sanity/Contentful/Supabase)
+• Deployment to Vercel/Netlify with SSL + CDN
+
+Process:
+1) 30‑min kickoff to align on style, pages, and brand assets
+2) Interactive preview in 48–72h
+3) Iteration & content load
+4) Go‑live + handoff video + 14‑day support
+
+Included here is a **live code preview** you can open locally.
+If you like the direction, I’ll extend it with your real images, copy, and brand system.
+
+Looking forward to collaborating!
+— Marcel
