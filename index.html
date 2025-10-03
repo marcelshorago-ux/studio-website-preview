@@ -1,69 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>StudioLens — Weddings & Videography</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudioLens — Weddings, Graduation, Concert, Ecommerce, Fashion</title>
+  <meta name="description" content="Professional photography & videography — weddings, graduation, live concert, ecommerce, and fashion. Watch reels, browse galleries, and check availability." />
+  <meta property="og:title" content="StudioLens — Photo & Video Studio" />
+  <meta property="og:description" content="See wedding, graduation, live concert, ecommerce and fashion work. Mobile-first, fast, and SEO-optimized." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/og-cover.jpg" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
   <script defer src="script.js"></script>
+
+  <!-- JSON-LD: Business + VideoObject for the featured reel -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "StudioLens",
+    "description": "Professional photography & videography for weddings, graduation, live concert, ecommerce, and fashion.",
+    "url": "https://marcelshorago-ux.github.io/studio-website-preview/",
+    "image": "https://marcelshorago-ux.github.io/studio-website-preview/assets/og-cover.jpg",
+    "areaServed": "Worldwide",
+    "makesOffer": [
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Wedding Photo & Video"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Graduation Sessions"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Live Concert Coverage"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Ecommerce Photoshoots"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Fashion Editorials"}}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"VideoObject",
+    "name":"StudioLens Featured Reel",
+    "description":"Highlights across weddings, graduations, concerts, ecommerce and fashion.",
+    "thumbnailUrl":"https://marcelshorago-ux.github.io/studio-website-preview/assets/hero1_thumb.jpg",
+    "uploadDate":"2025-01-01",
+    "embedUrl":"https://player.vimeo.com/video/76979871"
+  }
+  </script>
 </head>
 <body>
-<header class="container">
-  <nav class="nav">
-    <div class="logo">Studio<span>Lens</span></div>
-    <a class="cta" href="#contact">Book Now</a>
-  </nav>
-  <section class="hero">
-    <h1>Cinematic Weddings & Timeless Photography</h1>
-    <p>We capture the emotions, the beauty, and the story of your special day.</p>
-    <div class="hero-cta">
-      <a href="#reel" class="btn">Watch Reel</a>
-      <a href="#portfolio" class="btn btn-alt">View Portfolio</a>
-    </div>
-  </section>
-</header>
+  <header class="container">
+    <nav class="nav">
+      <div class="logo">Studio<span>Lens</span></div>
+      <div class="nav-links">
+        <a href="#reel">Reel</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#services">Services</a>
+        <a class="cta" href="#contact">Check Availability</a>
+      </div>
+    </nav>
+    <section class="hero">
+      <h1>Capture the Moment. <span>Tell the Story.</span></h1>
+      <p>Weddings, graduation, live concert, ecommerce, and fashion — crafted photo & cinematic video.</p>
+      <div class="hero-cta">
+        <a href="#reel" class="btn">Watch Featured Reel</a>
+        <a href="#portfolio" class="btn btn-alt">View Portfolio</a>
+      </div>
+    </section>
+  </header>
 
-<main>
-  <!-- Reel -->
-  <section id="reel" class="container reel">
-    <h2>Wedding Highlight Reel</h2>
-    <div class="video-embed">
-      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
-  </section>
+  <main>
+    <!-- Featured Reel (demo embed; swap with client video later) -->
+    <section id="reel" class="container reel">
+      <h2>Featured Reel</h2>
+      <div class="video-embed">
+        <iframe title="Featured Reel" src="https://player.vimeo.com/video/76979871" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <p class="tiny">*Demo reel for preview. Replace with client’s Vimeo/YouTube link in one line.</p>
+    </section>
 
-  <!-- Portfolio -->
-  <section id="portfolio" class="container portfolio">
-    <h2>Portfolio</h2>
-    <div class="masonry">
-      <a href="assets/hero1.jpg" class="item"><img src="assets/hero1_thumb.jpg" alt="Wedding"/></a>
-      <a href="https://www.youtube.com/embed/ScMzIvxBSi4" class="item video"><img src="assets/grad1_thumb.jpg" alt="Wedding Video"/></a>
-      <a href="assets/fashion1.jpg" class="item"><img src="assets/fashion1_thumb.jpg" alt="Fashion"/></a>
-      <a href="https://player.vimeo.com/video/76979871" class="item video"><img src="assets/concert1_thumb.jpg" alt="Concert Video"/></a>
-    </div>
-    <!-- Lightbox -->
-    <div id="lightbox" class="lightbox" aria-hidden="true">
-      <button class="lightbox-close">&times;</button>
-      <img id="lb-img" alt="preview"/>
-      <iframe id="lb-video" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
-  </section>
+    <!-- Services: exactly per the proposal -->
+    <section id="services" class="container services">
+      <h2>Services</h2>
+      <div class="grid">
+        <article class="card"><h3>Wedding</h3><p>Full-day photo & multi-cam video, highlight films, albums.</p></article>
+        <article class="card"><h3>Graduation</h3><p>Solo & group sessions, campus locations, print-ready edits.</p></article>
+        <article class="card"><h3>Live Concert</h3><p>Stage & backstage, multi-cam capture, press kits.</p></article>
+        <article class="card"><h3>Ecommerce</h3><p>On-model, flat-lay, product 360°, color-consistent edits.</p></article>
+        <article class="card"><h3>Fashion</h3><p>Editorial sets, lookbooks, campaign videos.</p></article>
+      </div>
+    </section>
 
-  <!-- Contact -->
-  <section id="contact" class="container contact">
-    <h2>Check Availability</h2>
-    <form onsubmit="event.preventDefault(); alert('Demo form only');">
-      <input type="text" placeholder="Your Name" required/>
-      <input type="email" placeholder="Email" required/>
-      <textarea rows="4" placeholder="Tell us about your day..."></textarea>
-      <button class="btn">Send Request</button>
-    </form>
-  </section>
-</main>
+    <!-- Portfolio: images + video, with category filters -->
+    <section id="portfolio" class="container portfolio">
+      <div class="portfolio-header">
+        <h2>Portfolio</h2>
+        <div class="filters" role="tablist" aria-label="Portfolio filters">
+          <button class="filter active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="filter" data-filter="wedding" role="tab">Wedding</button>
+          <button class="filter" data-filter="graduation" role="tab">Graduation</button>
+          <button class="filter" data-filter="concert" role="tab">Live Concert</button>
+          <button class="filter" data-filter="ecommerce" role="tab">Ecommerce</button>
+          <button class="filter" data-filter="fashion" role="tab">Fashion</button>
+          <button class="filter" data-filter="video" role="tab">Video</button>
+        </div>
+      </div>
 
-<footer class="container footer">
-  <p>© <span id="year"></span> StudioLens — All rights reserved.</p>
-</footer>
+      <div class="masonry" id="gallery">
+        <!-- Wedding -->
+        <a href="assets/hero1.jpg" class="item wedding" data-type="image"><img loading="lazy" src="assets/hero1_thumb.jpg" alt="Wedding — Couple"/></a>
+        <a href="assets/hero2.jpg" class="item wedding" data-type="image"><img loading="lazy" src="assets/hero2_thumb.jpg" alt="Wedding — Ceremony"/></a>
+        <!-- Graduation -->
+        <a href="assets/grad1.jpg" class="item graduation" data-type="image"><img loading="lazy" src="assets/grad1_thumb.jpg" alt="Graduation — Cap & Gown"/></a>
+        <!-- Concert -->
+        <a href="assets/concert1.jpg" class="item concert" data-type="image"><img loading="lazy" src="assets/concert1_thumb.jpg" alt="Concert — Live Shot"/></a>
+        <!-- Ecommerce -->
+        <a href="assets/ecom1.jpg" class="item ecommerce" data-type="image"><img loading="lazy" src="assets/ecom1_thumb.jpg" alt="Ecommerce — Product"/></a>
+        <!-- Fashion -->
+        <a href="assets/fashion1.jpg" class="item fashion" data-type="image"><img loading="lazy" src="assets/fashion1_thumb.jpg" alt="Fashion — Editorial"/></a>
+
+        <!-- Video (demo IDs per category; replace later) -->
+        <a href="https://player.vimeo.com/video/76979871" class="item video wedding" data-type="video"><img loading="lazy" src="assets/hero1_thumb.jpg" alt="Wedding Film"/></a>
+        <a href="https://www.youtube.com/embed/aqz-KE-bpKQ" class="item video graduation" data-type="video"><img loading="lazy" src="assets/grad1_thumb.jpg" alt="Graduation Film"/></a>
+        <a href="https://www.youtube.com/embed/tgbNymZ7vqY" class="item video concert" data-type="video"><img loading="lazy" src="assets/concert1_thumb.jpg" alt="Concert Film"/></a>
+        <a href="https://www.youtube.com/embed/2Vv-BfVoq4g" class="item video ecommerce" data-type="video"><img loading="lazy" src="assets/ecom1_thumb.jpg" alt="Ecommerce Film"/></a>
+        <a href="https://www.youtube.com/embed/JEi_d5mzFJw" class="item video fashion" data-type="video"><img loading="lazy" src="assets/fashion1_thumb.jpg" alt="Fashion Film"/></a>
+      </div>
+
+      <!-- Lightbox for images & embedded videos -->
+      <div id="lightbox" class="lightbox" aria-hidden="true">
+        <button class="lightbox-close" aria-label="Close">&times;</button>
+        <img id="lb-img" alt="preview"/>
+        <iframe id="lb-video" title="Video preview" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="container about">
+      <h2>About</h2>
+      <p>We blend cinematic storytelling with pristine imagery to capture authentic moments and elevate your brand. Available worldwide.</p>
+    </section>
+
+    <!-- Contact / Booking -->
+    <section id="contact" class="container contact">
+      <h2>Check Availability</h2>
+      <form class="contact-form" action="#" onsubmit="event.preventDefault(); alert('Demo only — connect Formspree or SendGrid.');">
+        <div class="row">
+          <input type="text" placeholder="Full name" required aria-label="Full name" />
+          <input type="email" placeholder="Email address" required aria-label="Email address" />
+        </div>
+        <div class="row">
+          <select aria-label="Service">
+            <option>Wedding</option>
+            <option>Graduation</option>
+            <option>Live Concert</option>
+            <option>Ecommerce</option>
+            <option>Fashion</option>
+          </select>
+          <input type="date" aria-label="Event date" />
+        </div>
+        <textarea rows="5" placeholder="Tell us about your day... venue, vibe, guest count." aria-label="Project details"></textarea>
+        <button class="btn">Request a Consult</button>
+      </form>
+      <p class="tiny">Integrate bookings via Calendly or embed a form submission in minutes.</p>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p>© <span id="year"></span> StudioLens — All rights reserved.</p>
+  </footer>
 </body>
 </html>
