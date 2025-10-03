@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>StudioLens — Weddings, Graduation, Concert, Ecommerce, Fashion</title>
-  <meta name="description" content="Professional photography & videography — weddings, graduation, live concert, ecommerce, and fashion. Watch reels, browse galleries, and check availability." />
+  <meta name="description" content="Professional photography & videography — weddings, graduation, live concert, ecommerce, and fashion. Watch reels, browse galleries, check availability, or book a consult." />
   <meta property="og:title" content="StudioLens — Photo & Video Studio" />
   <meta property="og:description" content="See wedding, graduation, live concert, ecommerce and fashion work. Mobile-first, fast, and SEO-optimized." />
   <meta property="og:type" content="website" />
@@ -15,7 +15,11 @@
   <link rel="stylesheet" href="styles.css" />
   <script defer src="script.js"></script>
 
-  <!-- JSON-LD: Business + VideoObject for the featured reel -->
+  <!-- Calendly popup widget -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+  <!-- JSON-LD: Business + VideoObject -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -53,8 +57,9 @@
       <div class="nav-links">
         <a href="#reel">Reel</a>
         <a href="#portfolio">Portfolio</a>
-        <a href="#services">Services</a>
-        <a class="cta" href="#contact">Check Availability</a>
+        <a href="#packages">Packages</a>
+        <a href="#testimonials">Reviews</a>
+        <a class="cta calendly-cta" data-calendly-url="https://calendly.com/YOUR_CALENDLY/intro">Book a Consult</a>
       </div>
     </nav>
     <section class="hero">
@@ -62,22 +67,22 @@
       <p>Weddings, graduation, live concert, ecommerce, and fashion — crafted photo & cinematic video.</p>
       <div class="hero-cta">
         <a href="#reel" class="btn">Watch Featured Reel</a>
-        <a href="#portfolio" class="btn btn-alt">View Portfolio</a>
+        <a class="btn btn-alt calendly-cta" data-calendly-url="https://calendly.com/YOUR_CALENDLY/intro">Check Availability</a>
       </div>
     </section>
   </header>
 
   <main>
-    <!-- Featured Reel (demo embed; swap with client video later) -->
+    <!-- Featured Reel -->
     <section id="reel" class="container reel">
       <h2>Featured Reel</h2>
       <div class="video-embed">
         <iframe title="Featured Reel" src="https://player.vimeo.com/video/76979871" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe>
       </div>
-      <p class="tiny">*Demo reel for preview. Replace with client’s Vimeo/YouTube link in one line.</p>
+      <p class="tiny">*Demo reel for preview. Swap with your Vimeo/YouTube link.</p>
     </section>
 
-    <!-- Services: exactly per the proposal -->
+    <!-- Services -->
     <section id="services" class="container services">
       <h2>Services</h2>
       <div class="grid">
@@ -89,7 +94,7 @@
       </div>
     </section>
 
-    <!-- Portfolio: images + video, with category filters -->
+    <!-- Portfolio with filters -->
     <section id="portfolio" class="container portfolio">
       <div class="portfolio-header">
         <h2>Portfolio</h2>
@@ -105,19 +110,15 @@
       </div>
 
       <div class="masonry" id="gallery">
-        <!-- Wedding -->
+        <!-- Images -->
         <a href="assets/hero1.jpg" class="item wedding" data-type="image"><img loading="lazy" src="assets/hero1_thumb.jpg" alt="Wedding — Couple"/></a>
         <a href="assets/hero2.jpg" class="item wedding" data-type="image"><img loading="lazy" src="assets/hero2_thumb.jpg" alt="Wedding — Ceremony"/></a>
-        <!-- Graduation -->
         <a href="assets/grad1.jpg" class="item graduation" data-type="image"><img loading="lazy" src="assets/grad1_thumb.jpg" alt="Graduation — Cap & Gown"/></a>
-        <!-- Concert -->
         <a href="assets/concert1.jpg" class="item concert" data-type="image"><img loading="lazy" src="assets/concert1_thumb.jpg" alt="Concert — Live Shot"/></a>
-        <!-- Ecommerce -->
         <a href="assets/ecom1.jpg" class="item ecommerce" data-type="image"><img loading="lazy" src="assets/ecom1_thumb.jpg" alt="Ecommerce — Product"/></a>
-        <!-- Fashion -->
         <a href="assets/fashion1.jpg" class="item fashion" data-type="image"><img loading="lazy" src="assets/fashion1_thumb.jpg" alt="Fashion — Editorial"/></a>
 
-        <!-- Video (demo IDs per category; replace later) -->
+        <!-- Videos (demo IDs per category) -->
         <a href="https://player.vimeo.com/video/76979871" class="item video wedding" data-type="video"><img loading="lazy" src="assets/hero1_thumb.jpg" alt="Wedding Film"/></a>
         <a href="https://www.youtube.com/embed/aqz-KE-bpKQ" class="item video graduation" data-type="video"><img loading="lazy" src="assets/grad1_thumb.jpg" alt="Graduation Film"/></a>
         <a href="https://www.youtube.com/embed/tgbNymZ7vqY" class="item video concert" data-type="video"><img loading="lazy" src="assets/concert1_thumb.jpg" alt="Concert Film"/></a>
@@ -125,7 +126,7 @@
         <a href="https://www.youtube.com/embed/JEi_d5mzFJw" class="item video fashion" data-type="video"><img loading="lazy" src="assets/fashion1_thumb.jpg" alt="Fashion Film"/></a>
       </div>
 
-      <!-- Lightbox for images & embedded videos -->
+      <!-- Lightbox -->
       <div id="lightbox" class="lightbox" aria-hidden="true">
         <button class="lightbox-close" aria-label="Close">&times;</button>
         <img id="lb-img" alt="preview"/>
@@ -133,34 +134,77 @@
       </div>
     </section>
 
-    <!-- About -->
-    <section class="container about">
-      <h2>About</h2>
-      <p>We blend cinematic storytelling with pristine imagery to capture authentic moments and elevate your brand. Available worldwide.</p>
+    <!-- Packages -->
+    <section id="packages" class="container packages">
+      <h2>Packages</h2>
+      <div class="grid">
+        <article class="card price">
+          <h3>Essential</h3>
+          <p class="price-tag">$1,800</p>
+          <ul>
+            <li>6 hrs photo or video</li>
+            <li>One shooter</li>
+            <li>Online gallery</li>
+          </ul>
+          <a class="btn btn-block calendly-cta" data-calendly-url="https://calendly.com/YOUR_CALENDLY/intro">Check Date</a>
+        </article>
+        <article class="card price">
+          <h3>Signature</h3>
+          <p class="price-tag">$3,200</p>
+          <ul>
+            <li>8 hrs photo + video</li>
+            <li>Two shooters</li>
+            <li>Highlight film (3–5 min)</li>
+          </ul>
+          <a class="btn btn-block calendly-cta" data-calendly-url="https://calendly.com/YOUR_CALENDLY/intro">Book a Consult</a>
+        </article>
+        <article class="card price">
+          <h3>Cinema</h3>
+          <p class="price-tag">$4,800</p>
+          <ul>
+            <li>10 hrs photo + video</li>
+            <li>Drone + multi-cam audio</li>
+            <li>Doc edit of ceremony & speeches</li>
+          </ul>
+          <a class="btn btn-block calendly-cta" data-calendly-url="https://calendly.com/YOUR_CALENDLY/intro">Custom Quote</a>
+        </article>
+      </div>
+      <p class="tiny">Demo prices for preview; we’ll tailor to market & scope.</p>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="container testimonials">
+      <h2>What clients say</h2>
+      <div class="grid">
+        <article class="card"><p>“Our film feels like a movie. We cried watching it.”</p><p class="sig">— A & J, Miami</p></article>
+        <article class="card"><p>“Zero stress, beautiful direction, stunning color.”</p><p class="sig">— D & L, Austin</p></article>
+        <article class="card"><p>“Professional, calm, insanely creative. Families keep rewatching.”</p><p class="sig">— M & R, NYC</p></article>
+      </div>
     </section>
 
     <!-- Contact / Booking -->
     <section id="contact" class="container contact">
       <h2>Check Availability</h2>
-      <form class="contact-form" action="#" onsubmit="event.preventDefault(); alert('Demo only — connect Formspree or SendGrid.');">
+      <!-- Replace YOUR_FORMSPREE_ID below with your Formspree form ID -->
+      <form class="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
         <div class="row">
-          <input type="text" placeholder="Full name" required aria-label="Full name" />
-          <input type="email" placeholder="Email address" required aria-label="Email address" />
+          <input type="text" name="name" placeholder="Full name" required aria-label="Full name" />
+          <input type="email" name="email" placeholder="Email address" required aria-label="Email address" />
         </div>
         <div class="row">
-          <select aria-label="Service">
+          <select name="service" aria-label="Service">
             <option>Wedding</option>
             <option>Graduation</option>
             <option>Live Concert</option>
             <option>Ecommerce</option>
             <option>Fashion</option>
           </select>
-          <input type="date" aria-label="Event date" />
+          <input type="date" name="date" aria-label="Event date" />
         </div>
-        <textarea rows="5" placeholder="Tell us about your day... venue, vibe, guest count." aria-label="Project details"></textarea>
-        <button class="btn">Request a Consult</button>
+        <textarea name="message" rows="5" placeholder="Tell us about your day... venue, vibe, guest count." aria-label="Project details"></textarea>
+        <button class="btn" type="submit">Request a Consult</button>
       </form>
-      <p class="tiny">Integrate bookings via Calendly or embed a form submission in minutes.</p>
+      <p class="tiny">Prefer live scheduling? <a href="#" class="calendly-cta" data-calendly-url="https://calendly.com/YOUR_CALENDLY/intro">Book a Calendly slot</a>.</p>
     </section>
   </main>
 

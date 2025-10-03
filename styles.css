@@ -49,3 +49,14 @@ input,select,textarea{flex:1;background:#0f172a;border:1px solid #273045;color:#
 .lightbox-close {position:absolute; top:1rem; right:1rem; background:transparent; color:#e2e8f0; font-size:2rem; border:0; cursor:pointer}
 
 .filters .filter[data-filter="video"]::after {content:" •"; color:#475569}
+
+/* Calendly button look stays consistent with .btn */
+.btn.btn-block {display:block; text-align:center}
+
+.packages .price {display:flex; flex-direction:column; gap:.5rem}
+.price-tag {font-weight:800; font-size:1.6rem; color:#60a5fa}
+
+.testimonials .sig {color:#64748b; font-size:.9rem; margin-top:.5rem}
+
+/* Lightbox already present; ensure high z-index for popups */
+.lightbox {z-index: 1000;}
